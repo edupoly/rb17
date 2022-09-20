@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                border:1px solid;
+                background-color: indianred;
+                width:150px;
+                height:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="console.log(event.target)">
+            My Button
+        </button>
+        <button onclick="xyz()">Another button</button>
+        <div id="d1" onclick="pqr(event)">
+
+        </div>
+        <script>
+            function abc(){
+                console.log("Just click a button")
+            }
+            function xyz(){
+                console.log("Another button clicked")
+            }
+            function pqr(ev) {
+                ev.target.style.backgroundColor='red'
+            }
+        </script>
+    </body>
+</html>
+<!-- 
+   event 
+   eventListener
+   eventHandler
+   event object
+
+   document
+ -->

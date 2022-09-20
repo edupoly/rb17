@@ -1,0 +1,54 @@
+<html>
+    <body>
+        <script>
+
+            console.log(j)
+
+            var j = 123;
+
+            var k = add(11,324);
+            function add(a,b){
+                return a+b;
+            }//function decleration//
+
+            // var g = mul(34,45);
+            // console.log(g);
+
+            var mul = function(a,b){
+                return a*b
+            }//function expression//function literal//function as data//variable functions
+            var r = mul(10,20);
+            console.log(r)
+
+            mul = 1545;
+            console.log(mul);
+
+            // mul(33,44);//error//because mul is no more a function
+
+            (function(){
+                console.log("Say HI");
+            })();//self executatble functions//iife
+
+            function sub(a,b,cb)
+            {
+                var x = a-b;
+                cb(x)
+            }
+            sub(18,4,function(res){console.log(res)})
+
+            setInterval(function(){
+                console.log("HI set interval")
+            },3000);
+
+        </script>
+    </body>
+</html>
+<!-- 
+    function decleration
+    //function expression//function literal//function as data//variable functions
+    ananymous function
+    //self executatble functions//iife
+    //firstclass function
+    //callback function
+    //higher order function
+ -->

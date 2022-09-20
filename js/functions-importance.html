@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+            function facto(n){
+                var f=1;
+                for(var i=n;i>=1;i--)
+                {
+                    f=f*i;
+                }
+                return f;
+            }
+            
+           
+
+            n = 7
+            r = 5;
+
+            var nf=1;
+            nf = facto(n)
+            console.log(nf)
+            var rf = facto(r)
+            console.log(rf);
+            var nmrf = facto(n-r)
+
+            var res;
+            res = nf/(rf*nmrf);
+            console.log(res)
+        </script>
+    </body>
+</html>
+9,8,4,5,2,7

@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <script>
+            function abc(){
+                var j = 1;
+                function foo(){
+                    j=j+20;
+                    console.log(j);
+                }
+                return foo;
+            }
+            var k = abc();
+            console.dir(k);
+            k();
+            k();
+        </script>
+    </body>
+</html>

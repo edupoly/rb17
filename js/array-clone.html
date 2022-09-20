@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            var ar = [12,34,[10,20],56];
+
+            var br = ar;//reference copy
+            
+            var cr = Array.from(ar)//clone//shallow copy
+
+            var dr = JSON.parse(JSON.stringify(ar))//deep copy
+
+            console.log("dr::::",dr)
+
+            br[1]='himaja';
+            br[2][1]='gauri';
+
+            console.log(ar)
+            console.log(br)
+            console.log(cr)
+            console.log(dr)
+        </script>
+    </body>
+</html>

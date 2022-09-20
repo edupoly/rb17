@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+            var ar = [11,2,345,5,67,78];
+            ar.forEach(function(a,i){
+                console.log("firstclass array methods",a,i)
+            })
+            var x = ar.map(function(a,i){
+                        console.log("Hello how are u",a,i);
+                        return a*10;
+                    })
+            console.log(x)
+            var y = ar.filter(function(a,i){
+                if(a%2===0){
+                    return true
+                }
+                else{
+                    return false
+                }
+            })
+            console.log(y)
+            var z = ar.reduce(function(a,b){
+                console.log(a,b);
+                return a+b
+            },0)
+            console.log(z)
+            console.log(ar);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+            var ob1 = {
+                firstname:'jaya',
+                lastname:'droa'
+            }
+            Object.freeze(ob1);
+            ob1.gender='female';
+            ob1.lastname='reddy'
+            console.log(ob1)
+
+            const ob2 = {
+                place:'dubai',
+                likes:'pepsi'
+            }
+            // ob2 = {sdf:'xdfg'}//error
+            ob2.place='newyork'
+            console.log(ob2)
+
+            const ob3 = {
+                sport:'cricket',
+                heroine:'deepika'
+            }
+            Object.seal(ob3);
+            ob3.gender= 'female'
+            ob3.sport='hockey'
+            console.log(ob3)
+        </script>
+    </body>
+</html>

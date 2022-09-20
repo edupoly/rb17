@@ -1,0 +1,80 @@
+<html>
+    <body>
+        <script>
+            var ar = [11,24,56,9,16,11025,25,29,54];
+
+            var wr = ar.slice(0)
+
+            console.log(wr)
+
+            var br = ['praveen','rahul','himaja'];
+            var cr;
+            cr = br.concat(ar);
+            console.log(cr)
+            var dr = ar.concat([])
+            console.log(dr)
+
+            var er = ar.entries()
+            console.log(er)
+
+            var f = ar.every(function(a){
+                if(a<=30){
+                    return true
+                }
+                else{
+                    return false
+                }
+            })
+            console.log(f)
+
+            var fr = [12,45,[91,83],49,30]
+            var gr = fr.flat();
+            console.log(gr)
+
+            console.log(ar);
+            ar.sort();
+            console.log(ar)
+
+            var students = [
+                {
+                    firstname:'kavya',
+                    lastname:'asbcd',
+                    age:27,
+                    salary:100
+                },
+                {
+                    firstname:'kiran',
+                    lastname:'serw',
+                    age:17,
+                    salary:140
+                },
+                {
+                    firstname:'abhi',
+                    lastname:'yaran',
+                    age:47,
+                    salary:300
+                },
+                {
+                    firstname:'darau',
+                    lastname:'himaja',
+                    age:28,
+                    salary:90
+                }
+            ]
+            var k = 'age';
+            students.sort(function(a,b){
+                if(a[k]>b[k]){
+                    return 1
+                }
+                else{
+                    return -1
+                }
+            })
+            console.log(students)
+        </script>
+    </body>
+</html>
+<!-- 
+    concat:
+        creates a new array
+ -->
