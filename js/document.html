@@ -1,22 +1,77 @@
 <html>
     <head>
         <title>Welcome to DOM</title>
+        <style>
+            .abcd{
+                color:indianred;
+                background-color: rebeccapurple;
+                border:10px solid red;
+            }
+        </style>
     </head>
     <body>
         <h1 id="dd">Praveen</h1>
         <h2>Rahul</h2>
         <h1>Priya</h1>
         <h2>Kalyani</h2>
+        <li>Anupama</li>
+        <ul id="myemployees">
+
+        </ul>
+        <img id='myfav' src="https://cdn.pixabay.com/photo/2017/09/23/17/29/deepika-padukone-2779557__480.jpg" alt="">
         <script>
-            document.getElementById('dd').style.background='lightgray'
+            // 
+
+            document.getElementById('myfav').setAttribute('src',"https://cdn.pixabay.com/photo/2016/12/03/14/20/children-1879907_1280.jpg")
+            var emps = ['gauri','ramesh','mounika','anji','giri','dhrithiman','rohit','pooja'];
+
+            emps.forEach(function(emp){
+                var newli = document.createElement('li');
+                newli.innerHTML=emp;
+                document.getElementById('myemployees').appendChild(newli)
+            })
+
+
+
+            //imperative programing
+            var d = document.createElement('li')
+            d.innerHTML = 'welcome to creation'
+            document.body.appendChild(d)
+            var h2first = document.querySelectorAll('h2')[0];
+
+            //h2first.className='abcd'
+
+            h2first.classList.add('abcd')
+
+            // h2first.style.color = 'royalblue'
+
+            h2first.innerHTML = 'steve'
+
+            h2first.title='welcome to dom';
+
+            // var s = document.querySelectorAll('h1')
+            // s.forEach(function(a){
+            //     a.style.border="10px solid red"
+            // })
+
+            // document.getElementById('dd').style.background='lightgray';
+
+            // var x = document.getElementsByTagName('h2');
+            // console.log(x)
+
+            // x[1].style.color='red';
+            // x[0].style.backgroundColor='lightgreen'
         </script>
     </body>
 </html>
 <!-- 
-    1. document object is also called as 
+    1. document object is also called as DOM
     
     a. document object helps us to access the html elements
         getElementById
+        getElementsByTagName
+        querySelectorAll
+        getElementsByClassName
     b. document object helps us to control the html elements
     c. document object helps us to modify the html elements
     d. document object helps us to create the html elements
