@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <script>
+      function mul(a,b){
+        return a*b;
+      }
+      var x = mul(123,'asd');
+      console.log(x);
+
+
+
+      function sub(a,b,cfun){
+        if(isNaN(a)||isNaN(b)){
+          cfun("arguments must be numbers",null)
+        }
+        else{
+          cfun(null,a-b);
+        }
+      }
+
+      sub(123,32,function(err,res){
+        if(err){
+          console.log(err)
+        }
+        else{
+          console.log(res)
+        }
+      })
+
+      function div(a,b){
+        if(isNaN(a)||isNaN(b)){
+          return Promise.reject("arguments must be numbers")
+        }
+        else{
+          if(b===0){
+            return Promise.reject('Denominator can never be zero')
+          }
+          else{
+            return Promise.resolve(a/b)
+          }
+        }
+      }
+
+      div(12,4).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
+      div(12,'kiran').then(function(res){console.log(res)}).catch(function(err){console.log(err)})
+      div(12,0).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
+      div(0,3).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
+
+    </script>
+  </body>
+</html>
