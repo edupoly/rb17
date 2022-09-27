@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script>
+      
+      $.get("https://restcountries.com/v2/all",function(data,status){
+        console.log("Hello result",data)
+      })
+      console.log("Last line")
+
+      fetch("https://fakestoreapi.com/products").then(function(res){console.log(res)}).catch()
+
+      console.log("another last line")
+    </script>
+  </body>
+</html>
