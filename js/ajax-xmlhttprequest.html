@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <div>
+      <ul id="d1">
+
+      </ul>
+    </div>
+    <script>
+      
+      var http = new XMLHttpRequest();
+      http.open('GET',"https://restcountries.com/v2/all");
+      http.send();
+      console.log(http.responseText)
+      http.onloadend=function(){
+        var countries = JSON.parse(http.responseText)
+        countries.forEach(function(a,b){
+          var newli = document.createElement('li');
+          newli.innerHTML = a.name;
+          document.getElementById('d1').appendChild(newli)
+        })
+      }
+    </script>
+  </body>
+</html>
+<!-- 
+  how to send request to server
+  http methods
+    GET
+    POST
+    PUT
+    DELETE
+
+ -->
