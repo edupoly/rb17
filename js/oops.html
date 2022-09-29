@@ -1,0 +1,55 @@
+<html>
+  <body>
+    <script>
+      class Employee{
+        constructor(fn,ln,g,d,p,c){
+          console.log("Employee constructor called")
+          this.firstname=fn;
+          this.lastname=ln;
+          this.gender=g;
+          this.dateOfBirth=d;
+          this.place=p;
+          this.city=c;
+        }
+        firstname;
+        lastname;
+        gender;
+        dateOfBirth;
+        place;
+        city;
+        getAge(){
+          var ct = new Date().getTime();
+          var dobt= new Date(this.dateOfBirth).getTime();
+          var ttime = ct-dobt;
+          console.log("age:",ttime/(1000*60*60*24*365))
+        }
+      }
+
+      var emp1 = new Employee();
+      emp1.firstname='praveen';
+      emp1.lastname='gubbala';
+      emp1.gender='male'
+      emp1.dateOfBirth='12/3/1993'
+
+      var emp2 = new Employee();
+      emp2.firstname='himaja';
+      emp2.lastname='rao';
+      emp2.gender='female'
+
+      // console.log(emp1)
+      // console.log(emp2)
+
+      var emp3 = new Employee('chandu','man','female','9/29/2003','razole','rjy');
+      // console.log(emp3)
+
+      var emp4 = new Employee('damodhar','reddy','male','04/19/1983','doon','karnool')
+      // console.log(emp4)
+
+      emp3.getAge();
+
+      emp1.getAge()
+
+      emp4.getAge();
+    </script>
+  </body>
+</html>
