@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <script>
+      class A{
+        x='akjsdh';
+      }
+      var ob1 = new A('praveen');
+      console.log(ob1.x)
+
+
+      class B extends A{
+        y;
+        constructor(q){
+          super();
+          this.y=q;
+        }
+        static z='india';
+      }
+
+      var ob2 = new B('rahul');
+      console.log(ob2.y)
+
+      console.log(ob2.x)
+
+      console.log(B.z)
+
+      console.log(ob2.z)
+    </script>
+  </body>
+</html>

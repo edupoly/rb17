@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <script>
+      function Abc(){
+        console.log("abc called and this pointed to:::",this)
+      }
+      Abc();
+      new Abc();
+      Abc.call();
+      Abc.call({firstname:'sowjanya',lastname:'asd'});
+    </script>
+  </body>
+</html>

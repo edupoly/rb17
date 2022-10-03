@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <script>
+      function Employee(fn,ln,g){
+        this.firstname=fn;
+        this.lastname=ln;
+        this.gender=g;
+      }
+      Employee.prototype.place='hyderabad';
+      console.dir(Employee)
+      var emp1 = new Employee('praveen','reddy','male');
+      var emp2 = new Employee('chitra','reddy','female');
+      console.log(emp1.place)
+      console.log(emp2.place)
+
+      console.dir(emp1)
+      emp1.__proto__.place='pune';
+      emp1.lastname='shetty';
+      console.log(emp1.place)
+      console.log(emp1.lastname)
+      console.log(emp2.place)
+      console.log(emp2.lastname)
+    </script>
+  </body>
+</html>

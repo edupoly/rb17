@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <script>
+      var ob1 = {
+        firstname:'praveen',
+        lastname:'gubbala',
+        fullName:function(){
+          console.log(this)
+          console.log(this.firstname+" "+this.lastname)
+        }
+      }
+      ob1.fullName();
+
+      var ob2 = {
+        firstname:'bhavana',
+        lastname:'thumati',
+      }
+      
+      var getFullName1 = ob1.fullName;
+      getFullName1();
+
+      var getFullName2 = ob1.fullName.bind(ob2)
+      getFullName2();
+    </script>
+  </body>
+</html>
