@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <script>
+      setTimeout(()=>console.log("hello"),3000)
+      var ar = [12,10,29,39,22,53,25];
+      var br = ar.map((a,i)=>a*10)
+      console.log(br);
+      var cr = ar.filter(a=>a%2===0)
+      console.log(cr);
+
+      function Employee(){
+        this.firstname='praveen'
+        this.lastname='gubbala';
+        this.fullname=function(){
+          var temp = this;
+          setTimeout(function(){
+            console.log(temp)
+            //console.log(this.firstname+this.lastname)
+          },1000)
+        }
+      }
+
+      var emp1 = new Employee();
+      emp1.fullname();
+
+      class Student{
+        firstname;
+        lastname;
+        constructor(fn,ln){
+          this.firstname=fn;
+          this.lastname=ln;
+        };
+        getFullName(){
+          setTimeout(()=>{
+            console.log(this.firstname+this.lastname)
+          },2000)
+        }
+      }
+      var std1 = new Student('jay','krishna');
+      std1.getFullName()
+    </script>
+  </body>
+</html>
+
+<!-- 
+  arrow functions
+  arrow expressions
+  lambda functions
+  lambda expressions
+ -->
