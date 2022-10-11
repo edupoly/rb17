@@ -1,0 +1,29 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+
+      var place='hyderabad';
+      var pincode=50081;
+      var landmark='medicoverhospital';
+      var state='telangana';
+      var district='rangareddy';
+      function acd(){return 'hi'}
+      var address={
+        place,
+        pincode,
+        landmark,
+        state,
+        district,
+        1292:'asdas',
+        ['address'+1]:'wieryuwu',
+        [acd()]:'apopi'
+      }
+      console.log(address)
+
+      var personalDetails={firstname:'praveen',lastname:'gubbala'}
+      var fullDetails = {...personalDetails,...address}
+      console.log(fullDetails)
+    </script>
+  </body>
+</html>

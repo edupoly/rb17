@@ -1,0 +1,28 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      function getCountries(){
+        var p = new Promise((resovle,reject)=>{
+          fetch('https://restcountries.com/v2/all')
+          .then((res)=>{
+            return res.json()
+          })
+          .then((data)=>{
+            resovle(data)
+          })
+        })
+        return p;
+      }
+      getCountries().then((data)=>{console.log(data)}).catch()
+      
+      async function getProducts(){
+        var x =  await fetch("https://fakestoreapi.com/products");
+        return x.json()
+      }
+
+      getProducts().then(data=>console.log(data)).catch();
+    </script>
+  </body>
+</html>

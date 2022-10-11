@@ -46,6 +46,15 @@
       div(12,0).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
       div(0,3).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
 
+      async function minus(a,b){
+        return await a-b;
+      }
+
+      minus(22,34).then(data=>console.log(data))
+
+      // var res = minus(102,34);
+      // console.log(res)
+
     </script>
   </body>
 </html>
